@@ -45,8 +45,6 @@ function [centers, idx, covars, taus, l_likelihood] = cluster_gmm(x, k, ...
     p = size(x, 1);
     n = size(x, 2);
 
-    rand('state', 1);
-
     taus = ones(1, k)/k;
 
     centers = x(:,randperm(n, k));
